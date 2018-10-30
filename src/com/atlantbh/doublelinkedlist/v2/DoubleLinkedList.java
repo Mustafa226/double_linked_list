@@ -1,4 +1,4 @@
-package com.atlantbh.doublelinkedlist.impl;
+package com.atlantbh.doublelinkedlist.v2;
 
 import java.util.Collection;
 import java.util.Iterator;

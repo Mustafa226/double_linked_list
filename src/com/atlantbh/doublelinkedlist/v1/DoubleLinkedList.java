@@ -1,4 +1,4 @@
-package com.atlantbh.doublelinkedlist;
+package com.atlantbh.doublelinkedlist.v1;
 
 /**
  * Note that best practice would be to implement List<E> interface.

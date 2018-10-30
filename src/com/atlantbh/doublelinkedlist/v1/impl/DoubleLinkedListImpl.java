@@ -1,6 +1,6 @@
-package com.atlantbh.doublelinkedlist.impl;
+package com.atlantbh.doublelinkedlist.v1.impl;
 
-import com.atlantbh.doublelinkedlist.DoubleLinkedList;
+import com.atlantbh.doublelinkedlist.v1.DoubleLinkedList;
 
 import java.util.*;
 

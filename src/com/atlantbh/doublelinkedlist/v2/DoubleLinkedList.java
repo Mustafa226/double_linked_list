@@ -3,8 +3,14 @@ package com.atlantbh.doublelinkedlist.v2;
 import java.util.*;
 
 /**
- * Note that some methods are left unimplemented.
- * This class is written just to present what will be the best practice to implement Double Linked List
+ * Double linked list implementation. It implements List<E> interface.
+ * List contains an extra pointer, typically called previous pointer, together with next pointer and element.
+ * <p>
+ * Note that some methods are left unimplemented due to the lack of time.
+ *
+ * @param <E>
+ * @author BattleArray61
+ * @see List
  */
 public class DoubleLinkedList<E> implements List<E> {
 
@@ -27,7 +33,7 @@ public class DoubleLinkedList<E> implements List<E> {
     }
 
     @Override
-    public boolean contains(Object o) {
+    public boolean contains(final Object o) {
         return indexOf(o) != -1;
     }
 
@@ -47,7 +53,7 @@ public class DoubleLinkedList<E> implements List<E> {
     }
 
     @Override
-    public boolean add(E e) {
+    public boolean add(final E e) {
         final Node tailNode = tail;
         final Node<E> newNode = new Node<>(tailNode, null, e);
         tail = newNode;
@@ -61,7 +67,7 @@ public class DoubleLinkedList<E> implements List<E> {
     }
 
     @Override
-    public boolean remove(Object o) {
+    public boolean remove(final Object o) {
         for (Node<E> iter = head; iter != null; iter = iter.next) {
             if (Objects.equals(o, iter.element)) {
                 removeNode(iter);
@@ -147,8 +153,8 @@ public class DoubleLinkedList<E> implements List<E> {
     }
 
     @Override
-    public void add(int index, E element) {
-        if (index < 0 || index > size ) {
+    public void add(int index, final E element) {
+        if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         } else {
             Node<E> node = head;

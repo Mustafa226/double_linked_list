@@ -5,6 +5,12 @@ import org.junit.Test;
 
 import java.util.List;
 
+/**
+ *  Test cases for DoubleLinkedList class implementation.
+ *
+ * @see DoubleLinkedList
+ * @author BattleArray61
+ */
 public class DoubleLinkedListTest {
 
     private List<Integer> list = new DoubleLinkedList<>();

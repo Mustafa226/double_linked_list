@@ -5,10 +5,12 @@ import com.atlantbh.doublelinkedlist.v1.DoubleLinkedList;
 import java.util.*;
 
 /**
- * Implementation of Double Linked List by implementing custom interface
+ * Double Linked List implementation. Implements custom interface DoubleLinkedList<E>.
+ * See DoubleLinkedList (v2) for BEST PRACTICE implementation.
  *
- * @param <E> the type of elements held in the List
- * @author Mustafa Mehuljic
+ * @see DoubleLinkedList
+ * @param <E>
+ * @author BattleArray61
  */
 public class DoubleLinkedListImpl<E> implements DoubleLinkedList<E> {
 

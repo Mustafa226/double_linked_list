@@ -2,8 +2,8 @@ package com.atlantbh.doublelinkedlist.v1;
 
 /**
  * Note that best practice would be to implement List<E> interface.
- * Since I am restricted with time I will define my own interface and implement standard functionalities
- * Future Work: Implement List<E> interface
+ * Since I am restricted with time I will define my own interface and implement some of the standard functionalities.
+ * @author BattleArray61
  * @param <E>
  */
 public interface DoubleLinkedList<E> {

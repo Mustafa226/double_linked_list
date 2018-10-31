@@ -1,9 +1,6 @@
 package com.atlantbh.doublelinkedlist.v2;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * Note that some methods are left unimplemented.
@@ -65,17 +62,9 @@ public class DoubleLinkedList<E> implements List<E> {
 
     @Override
     public boolean remove(Object o) {
-        if (o != null) {
-            for (Node<E> iter = head; iter != null; iter = iter.next) {
-                if (o.equals(iter.element)) {
-                    removeNode(iter);
-                }
-            }
-        } else {
-            for (Node<E> iter = head; iter != null; iter = iter.next) {
-                if (iter.element == null) {
-                    removeNode(iter);
-                }
+        for (Node<E> iter = head; iter != null; iter = iter.next) {
+            if (Objects.equals(o, iter.element)) {
+                removeNode(iter);
             }
         }
         return true;
@@ -141,7 +130,7 @@ public class DoubleLinkedList<E> implements List<E> {
 
     @Override
     public E get(int index) {
-        if (index > size || isEmpty()) {
+        if (index >= size) {
             throw new IndexOutOfBoundsException();
         } else {
             Node<E> node = head;
@@ -170,20 +159,11 @@ public class DoubleLinkedList<E> implements List<E> {
     @Override
     public int indexOf(Object o) {
         int counter = 0;
-        if (o != null) {
-            for (Node iterator = head; iterator != null; iterator = iterator.next) {
-                if (o.equals(iterator.element)) {
-                    return counter;
-                }
-                counter++;
+        for (Node iterator = head; iterator != null; iterator = iterator.next) {
+            if (Objects.equals(o, iterator.element)) {
+                return counter;
             }
-        } else {
-            for (Node iterator = head; iterator != null; iterator = iterator.next) {
-                if (iterator.element == null) {
-                    return counter;
-                }
-                counter++;
-            }
+            counter++;
         }
         return -1;
     }
@@ -191,19 +171,10 @@ public class DoubleLinkedList<E> implements List<E> {
     @Override
     public int lastIndexOf(Object o) {
         int counter = size;
-        if (o != null) {
-            for (Node iterator = tail; iterator != null; iterator = iterator.previous) {
-                counter--;
-                if (o.equals(iterator.element)) {
-                    return counter;
-                }
-            }
-        } else {
-            for (Node iterator = tail; iterator != null; iterator = iterator.previous) {
-                counter--;
-                if (iterator.element == null) {
-                    return counter;
-                }
+        for (Node iterator = tail; iterator != null; iterator = iterator.previous) {
+            counter--;
+            if (Objects.equals(o, iterator.element)) {
+                return counter;
             }
         }
         return -1;

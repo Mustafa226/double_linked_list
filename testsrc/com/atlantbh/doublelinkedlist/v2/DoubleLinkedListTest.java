@@ -84,4 +84,24 @@ public class DoubleLinkedListTest {
         list.add(1);
         Assert.assertEquals(2, list.lastIndexOf(1));
     }
+
+    @Test
+    public void removeNodeFromIndex() {
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Assert.assertEquals(1, list.indexOf(2));
+        list.remove(1);
+        Assert.assertEquals(-1, list.indexOf(2));
+        Assert.assertEquals(2, list.size());
+    }
+
+    @Test
+    public void addElementWithIndex() {
+        list.add(1);
+        Assert.assertEquals(1, list.size());
+        list.add(0, 2);
+        Assert.assertEquals(Integer.valueOf(2), list.get(0));
+        Assert.assertEquals(2, list.size());
+    }
 }

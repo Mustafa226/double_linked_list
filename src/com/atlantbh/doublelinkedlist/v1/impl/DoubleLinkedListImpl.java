@@ -5,7 +5,7 @@ import com.atlantbh.doublelinkedlist.v1.DoubleLinkedList;
 import java.util.*;
 
 /**
- * Implementation of Double Linked List by use of custom interface
+ * Implementation of Double Linked List by implementing custom interface
  *
  * @param <E> the type of elements held in the List
  * @author Mustafa Mehuljic

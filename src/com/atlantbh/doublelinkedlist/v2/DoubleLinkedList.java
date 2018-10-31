@@ -148,11 +148,40 @@ public class DoubleLinkedList<E> implements List<E> {
 
     @Override
     public void add(int index, E element) {
-
+        if (index < 0 || index > size ) {
+            throw new IndexOutOfBoundsException();
+        } else {
+            Node<E> node = head;
+            for (int i = 0; i < index; i++) {
+                node = node.next;
+            }
+            if (size != 0) {
+                Node<E> previous = node.previous;
+                Node<E> nodeToInsert = new Node<>(previous, node, element);
+                if (previous == null) {
+                    head = nodeToInsert;
+                } else {
+                    previous.next = nodeToInsert;
+                }
+            } else {
+                add(element);
+            }
+            size++;
+        }
     }
 
     @Override
     public E remove(int index) {
+        if (index >= size) {
+            throw new IndexOutOfBoundsException();
+        } else {
+            Node<E> node = head;
+            for (int i = 0; i < index; i++) {
+                node = node.next;
+            }
+            remove(node.element);
+        }
+
         return null;
     }
 

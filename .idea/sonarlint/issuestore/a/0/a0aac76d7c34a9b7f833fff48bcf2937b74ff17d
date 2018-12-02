@@ -1,0 +1,4 @@
+
+å squid:ForLoopCounterChangedCheckÉ"XRefactor the code in order to not assign to this loop counter from within the loop body.(»›¶Ô8æ°∑√Ï,
+Dsquid:S11684"&Return an empty array instead of null.(•πÔç8æ°∑√Ï,
+Jsquid:S1168Ê"+Return an empty collection instead of null.(•πÔç8∫≈´≈Ï,
